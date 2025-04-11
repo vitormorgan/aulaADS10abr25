@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulários</title>
+    <title>HTML Parte5</title>
 </head>
-
 <body>
-    <h1>Pesquisa no Google</h1>
-        <form action="https://www.google.com/search" method="get">
-        <!--method="get" ou method="post"-->
-        <label for="q">Texto a pesquisar</label>
-        <input type="text" id="q" name="q" autofocus>
+    <h1>Pesquisa vídeos youtube</h1>
+    <form action="https://www.youtube.com/results" method="get">
+        <label for="texto"> Informe texto para pesquisa</label>
+        <input type="text" name="search_query" id="texto">
         <br>
-        <fieldset>
-            <legend>Tipo de Pesquisa</legend>
-            <input type="radio" name="udm" id="todas" value="1" checked>
-            <label for="todas">Todas</label>
-            <br>
-            <!-- o parametro checked faz co mque uma das opções já venha marcada. -->
-            <input type="radio" name="udm" id="imagens" value="2">
-            <label for="imagens">Imagens</label>
-            <br>
-            <input type="radio" name="udm" id="videos" value="7">
-            <label for="videos">Vídeos</label>
-            <!-- O que faz as três caixas de seleção funcionarem juntos é porque o parâmetro name igual a turno em todos os três-->
-        </fieldset>
-        <br>
-        <input type="submit" value="Pesquisar" name="p"> 
+        <input type="submit" value="Enviar">
     </form>
 
 
@@ -36,93 +19,16 @@
     <br>
     <br>
 
-    <h1>Formulários HTML</h1>
-    <form action="http://ifrs.edu.br/cadastro.php" method="get">
-        <!-- method="get" não seguro, tudo pela URL    -  method="post" método segurp criptografado-->
-        <label for="nm">Informe seu nome</label>
-        <br> <!--Comando para forçar uma quebra de linha-->
-        <input type="text" id="nm" name="n" placeholder="Informe seu nome" required minlenght="20" maxlegth="120" size="80">
-        <!--readonly é um paramtro que impede a edição de uma campo-->
-        <!--required é um paramtro que impede  que o relatório seja enviado co, esse campo vaxio -->
+    <h1>Enviando mensagem pelo Whatsapp</h1>
+    <form action="https://web.whatsapp.com/send" method="get">
+        <label for="num_tel">Insira o número de telefone:</label>
+        <input type="text" name="phone" id="num_tel" value="54999999999">
         <br>
-
-        <label for="end">Informe o endereço</label>
-        <br>
-        <input type="text" id="end" name="endereço">
-        O valor do parametro for na tag label precisa ser igual com o paramtro id na tag input correspondente-->
-        <br>
-        <label for="senha">Informe a senha</label>
-        <br>
-        <input type="password" name="senha" id="senha" >
-        <!--O parametro focus faz com que o cursor já fique piscando nessa opção-->
-        <!--O parametro autocomplete="off" não sugere nada mesmo que esse site já tenha sido aceesado, geralmente não passar esse parametro-->
-        <br>
-        <label for="idade">Informe a idade</label>
-        <br>
-        <input type="number" name="idade" id="idade" min="0" max="150">
-        <br>
-        <label for="dtn">Informe data de nascimento</label>
-        <br>
-        <input type="date" name="dtn" id="dtn">
-        <br>
-        <label for="dtn_tm">Informe data e hora de nascimento</label>
-        <br>
-        <input type="datetime-local" name="dtn_tm" id="dtn_tm">
-        <br>
-        <label for="hora">Informe a hora atual</label>
-        <br>
-        <input type="time" name="hora" id="hora">
-        <br>
-        <br>
-        <br>
-        <fieldset>
-            <legend>Turno</legend>
-            <input type="radio" name="turno" id="manha" value="M">
-            <label for="manha">Manhã</label>
-            <br>
-            <!-- o parametro checked faz co mque uma das opções já venha marcada. -->
-            <input type="radio" name="turno" id="tarde" value="T" checked>
-            <label for="tarde">Tarde</label>
-            <br>
-            <input type="radio" name="turno" id="noite" value="N">
-            <label for="noite">Noite</label>
-            <!-- O que faz as três caixas de seleção funcionarem juntos é porque o parâmetro name igual a turno em todos os três-->
-        </fieldset>
-        <br>
-        <input type="checkbox" name="msg" id="msg" value="S" checked>
-        <label for="msg">Desejo receber mensagens.</label>
-        <br>
-        <br>
-        <label for="estado">Estado</label>
-        <select name="estado" id="estado">
-            <option value="">Selecione um estado</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="PR">Paraná</option>
-            <option value="SP">São Paulo</option>
-            <option value="RJ">Rio de Janeiro</option>
-        </select>
-        <br>
-        <br>
-        <label for="obs">Observação</label>
-        <br>
-        <textarea name="obs" id="obs" rows="10" cols="50"></textarea>
-        <br>
-        <br>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-        <br>
-        <br>
-        <label for="arquivo">Selecione o Arquivo</label>
-        <br>
-        <input type="file" value="arquivo" name="arquivo">
-        <br>
-        <br>
-        
-        <input type="submit" value="Enviar" name="salvar">
-        <input type="reset" value="Limpar" name="limpar">
-
+        <label for="texto">Insira o texto que deseja enviar:</label>
+        <input type="text" name="text" id="texto" value="Boa noite!!"> 
+        <!--o parametro value= não necessita obrigatorimente ser inserido. caso seja inserido ele deixa o campo input pré preenchido-->
+        <input type="submit" value="Enviar">
     </form>
+
 </body>
-
 </html>
